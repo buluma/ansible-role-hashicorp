@@ -4,7 +4,7 @@ Install HashiCorp products using packages.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-hashicorp/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-hashicorp/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-hashicorp/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-hashicorp)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/hashicorp)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/hashicorp)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-hashicorp.svg)](https://github.com/buluma/ansible-role-hashicorp/releases/)|
+|[![github](https://github.com/buluma/ansible-role-hashicorp/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-hashicorp/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-hashicorp/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-hashicorp)|[![quality](https://img.shields.io/ansible/quality/58209)](https://galaxy.ansible.com/buluma/hashicorp)|[![downloads](https://img.shields.io/ansible/role/d/58209)](https://galaxy.ansible.com/buluma/hashicorp)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-hashicorp.svg)](https://github.com/buluma/ansible-role-hashicorp/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
