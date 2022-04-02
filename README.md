@@ -20,6 +20,7 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
     - role: buluma.hashicorp
       hashicorp_products:
         - name: consul
+          version: "1.11.3"
 
     - role: buluma.hashicorp
       hashicorp_installation_method: manual
