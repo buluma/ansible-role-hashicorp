@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-hashicorp/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/1.0.5...HEAD)
+
+**Merged pull requests:**
+
+- Testing changeling [\#4](https://github.com/buluma/ansible-role-hashicorp/pull/4) ([buluma](https://github.com/buluma))
+
 ## [1.0.5](https://github.com/buluma/ansible-role-hashicorp/tree/1.0.5) (2022-03-28)
 
 [Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/1.0.4...1.0.5)
