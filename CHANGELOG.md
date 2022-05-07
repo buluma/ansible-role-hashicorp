@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- update cache on install [\#6](https://github.com/buluma/ansible-role-hashicorp/pull/6) ([buluma](https://github.com/buluma))
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#5](https://github.com/buluma/ansible-role-hashicorp/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.0.6](https://github.com/buluma/ansible-role-hashicorp/tree/1.0.6) (2022-04-24)
