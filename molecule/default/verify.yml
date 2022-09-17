@@ -5,7 +5,7 @@
   gather_facts: yes
 
   tasks:
-    - name: check if product is installed
+    - name: Check if product is installed
       ansible.builtin.command:
         cmd: "{{ item.name }} --version"
       args:
