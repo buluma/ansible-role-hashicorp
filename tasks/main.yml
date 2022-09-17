@@ -18,7 +18,7 @@
 
     - name: Configure debian
       block:
-        - name: install apt key for Debian
+        - name: Install apt key for Debian
           ansible.builtin.apt_key:
             url: "https://apt.releases.hashicorp.com/gpg"
             state: present
