@@ -8,10 +8,10 @@
     - role: ansible-role-hashicorp
       hashicorp_products:
         - name: consul
-          version: "1.15.2"
+          version: "v1.15.2"
     - role: ansible-role-hashicorp
       hashicorp_installation_method: manual
       hashicorp_products:
         - name: vault
-          version: "1.9.0"
+          version: "v1.13.2"
           type: ent
