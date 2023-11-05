@@ -2,9 +2,9 @@
 
 Install HashiCorp products using packages.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-hashicorp/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-hashicorp/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-hashicorp/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-hashicorp)|[![quality](https://img.shields.io/ansible/quality/58209)](https://galaxy.ansible.com/buluma/hashicorp)|[![downloads](https://img.shields.io/ansible/role/d/58209)](https://galaxy.ansible.com/buluma/hashicorp)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-hashicorp.svg)](https://github.com/buluma/ansible-role-hashicorp/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-hashicorp.svg)](https://github.com/buluma/ansible-role-hashicorp/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-hashicorp.svg)](https://github.com/buluma/ansible-role-hashicorp/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-hashicorp/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-hashicorp/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-hashicorp/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-hashicorp)|[![downloads](https://img.shields.io/ansible/role/d/4728)](https://galaxy.ansible.com/buluma/hashicorp)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-hashicorp.svg)](https://github.com/buluma/ansible-role-hashicorp/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-hashicorp.svg)](https://github.com/buluma/ansible-role-hashicorp/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-hashicorp.svg)](https://github.com/buluma/ansible-role-hashicorp/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -34,7 +34,7 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 
 ```yaml
 ---
-- name: prepare
+- name: Prepare
   hosts: all
   become: yes
   gather_facts: no
@@ -80,6 +80,14 @@ hashicorp_installation_method: package
 # hashicorp_products:
 #   - name: vault
 #     type: oss
+
+# Where to install the software in.
+hashicorp_destination: /usr/bin
+
+# The owner/group/mode for the installed binary.
+hashicorp_group: root
+hashicorp_owner: root
+hashicorp_mode: "0755"
 ```
 
 ## [Requirements](#requirements)
@@ -114,6 +122,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|bullseye|
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
+|[Kali](https://hub.docker.com/repository/docker/buluma/kali/general)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 
