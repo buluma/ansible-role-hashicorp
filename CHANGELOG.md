@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-hashicorp/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/1.0.9...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#13](https://github.com/buluma/ansible-role-hashicorp/issues/13)
+- Update action [\#12](https://github.com/buluma/ansible-role-hashicorp/issues/12)
+
 ## [1.0.9](https://github.com/buluma/ansible-role-hashicorp/tree/1.0.9) (2022-09-18)
 
 [Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/1.0.8...1.0.9)
