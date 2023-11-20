@@ -61,8 +61,6 @@ jobs:
             tag: "bionic"
           - image: "docker-ubuntu-systemd"
             tag: "lunar"
-          - image: "kali"
-            tag: "latest"
     steps:
       - name: checkout
         uses: actions/checkout@v4
