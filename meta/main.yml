@@ -20,11 +20,9 @@ galaxy_info:
         - bullseye
     - name: Fedora
       versions:
-        - all
+        - "37"
+        - "38"
     - name: Ubuntu
-      versions:
-        - all
-    - name: Kali
       versions:
         - all
   galaxy_tags:
