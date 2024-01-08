@@ -2,7 +2,16 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-hashicorp/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/1.0.9...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/1.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump actions/checkout from 3 to 4 [\#19](https://github.com/buluma/ansible-role-hashicorp/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.5 to 1.0.8 [\#18](https://github.com/buluma/ansible-role-hashicorp/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [1.1.0](https://github.com/buluma/ansible-role-hashicorp/tree/1.1.0) (2024-01-04)
+
+[Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/1.0.9...1.1.0)
 
 **Closed issues:**
 
