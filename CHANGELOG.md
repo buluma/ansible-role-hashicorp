@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-hashicorp/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/24.3.31...HEAD)
+
+**Closed issues:**
+
+- Update action [\#15](https://github.com/buluma/ansible-role-hashicorp/issues/15)
+- rebuild action [\#14](https://github.com/buluma/ansible-role-hashicorp/issues/14)
+
 ## [24.3.31](https://github.com/buluma/ansible-role-hashicorp/tree/24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/1.2.0...24.3.31)
