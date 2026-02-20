@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test hashicorp_installation_method
   ansible.builtin.assert:
     that:
