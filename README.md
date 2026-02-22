@@ -11,37 +11,33 @@ Install HashiCorp products using packages.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-hashicorp/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
----
-- name: Converge
-  hosts: all
-  become: true
+- become: true
   gather_facts: true
-
+  hosts: all
+  name: Converge
   roles:
-    - role: buluma.hashicorp
-      hashicorp_products:
-        - name: consul
-          version: "1.11.3"
-    - role: buluma.hashicorp
-      hashicorp_installation_method: manual
-      hashicorp_products:
-        - name: vault
-          version: "1.9.0"
-          type: ent
+  - hashicorp_products:
+    - name: consul
+      version: 1.11.3
+    role: buluma.hashicorp
+  - hashicorp_installation_method: manual
+    hashicorp_products:
+    - name: vault
+      type: ent
+      version: 1.9.0
+    role: buluma.hashicorp
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-hashicorp/blob/master/molecule/default/prepare.yml):
 
 ```yaml
----
-- name: Prepare
-  hosts: all
-  become: true
+- become: true
   gather_facts: false
-
+  hosts: all
+  name: Prepare
   roles:
-    - role: buluma.bootstrap
-    - role: buluma.core_dependencies
+  - role: buluma.bootstrap
+  - role: buluma.core_dependencies
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -51,43 +47,11 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-hashicorp/blob/master/defaults/main.yml):
 
 ```yaml
----
-# defaults file for hashicorp
-
-# You can select how to intall hashicorp products. Choose from `package` or
-# `manual`. `manual` means this role wil download from
-# "https://releases.hashicorp.com/vault/".
-hashicorp_installation_method: package
-
-# You can install hashicorp products using this list.
-# hashicorp_products:
-#   - name: consul
-#   - name: consul-template
-#   - name: nomad
-#   - name: packer
-#   - name: terraform
-#   - name: vagrant
-#   - name: vault
-
-# If you are using `manual` as the `hashicorp_installation_method`, you must
-# specify the version to install.
-# hashicorp_products:
-#   - name: vault
-#     version: "1.10.4"
-
-# For `vault` you can choose what type you want to install, either:
-# `oss` (default), `ent` or `hsm`.
-# hashicorp_products:
-#   - name: vault
-#     type: oss
-
-# Where to install the software in.
 hashicorp_destination: /usr/bin
-
-# The owner/group/mode for the installed binary.
 hashicorp_group: root
+hashicorp_installation_method: package
+hashicorp_mode: '0755'
 hashicorp_owner: root
-hashicorp_mode: "0755"
 ```
 
 ## [Requirements](#requirements)

@@ -2,10 +2,16 @@
 dependencies: []
 galaxy_info:
   author: buluma
-  role_name: hashicorp
-  description: Install HashiCorp products using packages.
-  license: Apache-2.0
   company: ShadowNet
+  description: Install HashiCorp products using packages.
+  galaxy_tags:
+    - hashicorp
+    - consul
+    - nomad
+    - terraform
+    - vagrant
+    - vault
+  license: Apache-2.0
   min_ansible_version: "2.12"
   platforms:
     - name: Amazon
@@ -23,10 +29,4 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
-  galaxy_tags:
-    - hashicorp
-    - consul
-    - nomad
-    - terraform
-    - vagrant
-    - vault
+  role_name: hashicorp
