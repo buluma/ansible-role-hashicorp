@@ -1,15 +1,16 @@
-- become: true
-  gather_facts: true
-  hosts: all
-  name: Converge
-  roles:
-  - hashicorp_products:
-    - name: consul
-      version: 1.11.3
-    role: buluma.hashicorp
-  - hashicorp_installation_method: manual
-    hashicorp_products:
-    - name: vault
-      type: ent
-      version: 1.9.0
-    role: buluma.hashicorp
+---
+  - become: true
+    gather_facts: true
+    hosts: all
+    name: Converge
+    roles:
+      - hashicorp_products:
+          - name: consul
+            version: 1.11.3
+        role: buluma.hashicorp
+      - hashicorp_installation_method: manual
+        hashicorp_products:
+          - name: vault
+            type: ent
+            version: 1.9.0
+        role: buluma.hashicorp

@@ -11,33 +11,35 @@ Install HashiCorp products using packages.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-hashicorp/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
-- become: true
-  gather_facts: true
-  hosts: all
-  name: Converge
-  roles:
-  - hashicorp_products:
-    - name: consul
-      version: 1.11.3
-    role: buluma.hashicorp
-  - hashicorp_installation_method: manual
-    hashicorp_products:
-    - name: vault
-      type: ent
-      version: 1.9.0
-    role: buluma.hashicorp
+---
+  - become: true
+    gather_facts: true
+    hosts: all
+    name: Converge
+    roles:
+      - hashicorp_products:
+          - name: consul
+            version: 1.11.3
+        role: buluma.hashicorp
+      - hashicorp_installation_method: manual
+        hashicorp_products:
+          - name: vault
+            type: ent
+            version: 1.9.0
+        role: buluma.hashicorp
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-hashicorp/blob/master/molecule/default/prepare.yml):
 
 ```yaml
-- become: true
-  gather_facts: false
-  hosts: all
-  name: Prepare
-  roles:
-  - role: buluma.bootstrap
-  - role: buluma.core_dependencies
+---
+  - become: true
+    gather_facts: false
+    hosts: all
+    name: Prepare
+    roles:
+      - role: buluma.bootstrap
+      - role: buluma.core_dependencies
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -47,10 +49,11 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-hashicorp/blob/master/defaults/main.yml):
 
 ```yaml
+---
 hashicorp_destination: /usr/bin
 hashicorp_group: root
 hashicorp_installation_method: package
-hashicorp_mode: '0755'
+hashicorp_mode: "0755"
 hashicorp_owner: root
 ```
 
