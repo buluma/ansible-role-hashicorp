@@ -44,17 +44,21 @@
             label: "{{ item.name }}"
           when:
             - item.version is not defined
-        - ansible.builtin.package:
+        - name: Install versioned hashicorp product using package
+          ansible.builtin.package:
             name: "{{ item.name }}{{ version_coupler }}{{ item.version }}"
             state: present
           when:
             - item.version is defined
-          name: Install versioned hashicorp product using package
           loop: "{{ hashicorp_products }}"
           loop_control:
             label: "{{ item.name }}"
-- block:
-    - ansible.builtin.unarchive:
+- name: Install manually
+  when:
+    - hashicorp_installation_method == "manual"
+  block:
+    - name: Install hashicorp product manually
+      ansible.builtin.unarchive:
         dest: "{{ hashicorp_destination }}"
         group: "{{ hashicorp_group }}"
         mode: "{{ hashicorp_mode }}"
@@ -64,7 +68,3 @@
       loop: "{{ hashicorp_products }}"
       loop_control:
         label: "{{ item.name }}"
-      name: Install hashicorp product manually
-  name: Install manually
-  when:
-    - hashicorp_installation_method == "manual"
