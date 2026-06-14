@@ -1,10 +1,12 @@
 ---
 - become: true
   gather_facts: true
+- name: Verify
   hosts: all
   name: Verify
   tasks:
     - ansible.builtin.command:
+    changed_when: false
         cmd: "{{ item.name }} --version"
       args:
         creates: nothing
