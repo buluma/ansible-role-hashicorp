@@ -23,10 +23,11 @@
           ansible.builtin.package:
             name: gpg
         - name: Install apt key for Debian
-          ansible.builtin.apt_key:
-            state: present
+          ansible.builtin.get_url:
             url: https://apt.releases.hashicorp.com/gpg
+            dest: /etc/apt/trusted.gpg.d/hashicorp.asc
             validate_certs: false
+            mode: "0644"
         - name: Install repository for Debian
           ansible.builtin.apt_repository:
             repo: deb [arch={{ hashicorp_architecture_mapping }}] https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main
