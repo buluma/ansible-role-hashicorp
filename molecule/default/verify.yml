@@ -1,18 +1,16 @@
 ---
-- become: true
-  gather_facts: true
 - name: Verify
   hosts: all
-  name: Verify
+  become: true
+  gather_facts: true
   tasks:
-    - ansible.builtin.command:
-    changed_when: false
+    - name: Check if product is installed
+      ansible.builtin.command:
         cmd: "{{ item.name }} --version"
-      args:
         creates: nothing
       environment:
         PATH: /bin:/usr/bin:/usr/local/bin
       loop:
         - name: consul
         - name: vault
-      name: Check if product is installed
+      changed_when: false
