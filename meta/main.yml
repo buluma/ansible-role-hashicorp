@@ -13,11 +13,4 @@ galaxy_info:
     - vault
   license: Apache-2.0
   min_ansible_version: "2.12"
-  platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
   role_name: hashicorp
