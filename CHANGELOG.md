@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-hashicorp/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/26.6.2...HEAD)
+
+**Merged pull requests:**
+
+- Bump ansible/ansible-lint from 26.6.0 to 26.8.0 [\#38](https://github.com/buluma/ansible-role-hashicorp/pull/38) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [26.6.2](https://github.com/buluma/ansible-role-hashicorp/tree/26.6.2) (2026-07-21)
 
 [Full Changelog](https://github.com/buluma/ansible-role-hashicorp/compare/26.6.1...26.6.2)
@@ -76,6 +84,7 @@
 **Merged pull requests:**
 
 - Testing changeling [\#4](https://github.com/buluma/ansible-role-hashicorp/pull/4) ([buluma](https://github.com/buluma))
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.3 to 1.0.4 [\#3](https://github.com/buluma/ansible-role-hashicorp/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.0.5](https://github.com/buluma/ansible-role-hashicorp/tree/1.0.5) (2022-03-28)
 
@@ -84,10 +93,6 @@
 **Closed issues:**
 
 - add to tracker [\#2](https://github.com/buluma/ansible-role-hashicorp/issues/2)
-
-**Merged pull requests:**
-
-- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.3 to 1.0.4 [\#3](https://github.com/buluma/ansible-role-hashicorp/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.0.4](https://github.com/buluma/ansible-role-hashicorp/tree/1.0.4) (2022-03-20)
 
